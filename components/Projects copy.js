@@ -17,31 +17,32 @@ import userData from "../constants/data";
 const ProjectCard = ({ title, link, imgUrl, description }) => {
   return (
     <LinkBox
+      // bgImage={imgUrl}
+      // bgPosition="center center"
+      // bgRepeat="no-repeat"
+      // bgSize="cover"
+      h="250px"
+      w="250px"
+      // m={2}
       display="flex"
       alignItems="center"
       justifyContent="center"
-      role="group"
+      // textColor="transparent"
+      transition="all 250ms ease-in-out"
+      _hover={{
+        textColor: "white",
+        blur: "8px",
+      }}
     >
-      <Box overflow="hidden">
-        <Image
-          src={imgUrl}
-          h="250px"
-          w="250px"
-          align="center center"
-          fit="contain"
-          _groupHover={{ filter: "blur(8px)", transform: "scale(1.03)" }}
-          transition="all 200ms ease-in-out"
-        />
-      </Box>
-      <LinkOverlay
-        href={link}
-        target="_blank"
-        position="absolute"
-        textColor="transparent"
-        _groupHover={{ textColor: "white" }}
-        transition="all 200ms ease-in-out"
-      >
-        <Box p={6}>
+      <Image
+        src={imgUrl}
+        h="250px"
+        w="250px"
+        align="center center"
+        fit="contain"
+      />
+      <LinkOverlay href={link} target="_blank">
+        <Box>
           <Heading size="md" textAlign="center">
             {title}
           </Heading>
