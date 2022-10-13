@@ -2,7 +2,7 @@ import Head from "next/head";
 import { Heading, Flex, Button, Link } from "@chakra-ui/react";
 // import styles from '../styles/Home.module.css'
 
-export default function ContactMe() {
+export default function ContactMe(pageProps) {
   return (
     <>
       <Flex height="100vh" alignItems="center" justifyContent="center">

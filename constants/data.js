@@ -15,7 +15,7 @@ const userData = {
       title: "Chris Rice - Developer Portfolio (v1)",
       link: "https://ricechrisdtreat.github.io/crPortfolio/",
       description: "v1 of portfolio page using basic HTML and CSS",
-      imgUrl: "/profile_square.jpg",
+      imgUrl: "/profile_square_v1.jpg",
     },
     {
       title: "Scotch Tour - v2 [COMING SOON]",
@@ -30,14 +30,14 @@ const userData = {
       link: "https://github.com/ricechrisdtreat/cr_portfolio_v2",
       description:
         "v2 of portfolio page, recreating v1 using next.js and Chakra UI",
-      imgUrl: "/profile_square.jpg",
+      imgUrl: "/profile_square_v2.jpg",
     },
     {
       title: "Chris Rice - Developer Portfolio (v3)",
       link: "https://docs.google.com/document/d/1yG7egNK6NN_YNriMk50mIIrWug9FFnnplvL8uQ26-_4/edit?usp=sharing",
       description:
         "v3 of portfolio page. A complete overhaul with additional whiz-bang functionality and design.",
-      imgUrl: "/profile_square.jpg",
+      imgUrl: "/profile_square_v3.jpg",
     },
   ],
   //   Future - add experience, resume, and social links

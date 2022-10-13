@@ -14,7 +14,7 @@ import Link from "next/link";
 import userData from "../constants/data";
 // import styles from '../styles/Home.module.css'
 
-const ProjectCard = ({ title, link, imgUrl, description }) => {
+const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
   return (
     <LinkBox
       display="flex"
@@ -29,7 +29,7 @@ const ProjectCard = ({ title, link, imgUrl, description }) => {
           w="250px"
           align="center center"
           fit="contain"
-          _groupHover={{ filter: "blur(8px)", transform: "scale(1.03)" }}
+          _groupHover={hoverStyle.imageHoverStyle}
           transition="all 200ms ease-in-out"
         />
       </Box>
@@ -37,8 +37,8 @@ const ProjectCard = ({ title, link, imgUrl, description }) => {
         href={link}
         target="_blank"
         position="absolute"
-        textColor="transparent"
-        _groupHover={{ textColor: "white" }}
+        textColor={hoverStyle.staticTextStyle}
+        _groupHover={hoverStyle.overlayHoverStyle}
         transition="all 200ms ease-in-out"
       >
         <Box p={6}>
@@ -54,9 +54,22 @@ const ProjectCard = ({ title, link, imgUrl, description }) => {
   );
 };
 
-export default function Projects() {
-  // const router = useRouter();
-  // console.log(router.asPath);
+export default function Projects(pageProps) {
+  // Hover styles enable for non-touch devices
+  let hoverStyle;
+  if (pageProps.isTouchDevice()) {
+    hoverStyle = {
+      imageHoverStyle: "none",
+      overlayHoverStyle: "none",
+      staticTextStyle: "white",
+    };
+  } else {
+    hoverStyle = {
+      imageHoverStyle: { filter: "blur(8px)", transform: "scale(1.03)" },
+      overlayHoverStyle: { textColor: "white" },
+      staticTextStyle: "transparent",
+    };
+  }
   return (
     <>
       <Flex direction="row" m={6}>
@@ -75,6 +88,7 @@ export default function Projects() {
             link={project.link}
             imgUrl={project.imgUrl}
             description={project.description}
+            hoverStyle={hoverStyle}
           />
         ))}
       </SimpleGrid>

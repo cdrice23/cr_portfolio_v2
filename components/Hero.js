@@ -1,11 +1,34 @@
 import React from "react";
-import { Text, Heading, Flex } from "@chakra-ui/react";
+import { Text, Heading, Flex, Image, useMediaQuery } from "@chakra-ui/react";
 
-export default function Hero() {
+export default function Hero(pageProps) {
+  const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
+  const imageAlign = isLargerThan912 ? "50% 50%" : "25% 50%";
+
   return (
     <>
-      <Flex height="100vh" alignItems="center" justifyContent="center">
-        <Flex direction="column" p={12} align="center">
+      <Flex
+        alignItems="center"
+        justifyContent="center"
+        h="100vh"
+        w="100%"
+        display="flex"
+      >
+        <Image
+          src="/headshot_portfolio.jpg"
+          w="100%"
+          h="100vh"
+          align={imageAlign}
+          fit="cover"
+          filter="grayscale(90%)"
+        />
+        <Flex
+          direction="column"
+          p={12}
+          align="center"
+          position="absolute"
+          textColor="white"
+        >
           <Heading as="h1" size="2xl" p={6}>
             Hi, I'm Chris
           </Heading>

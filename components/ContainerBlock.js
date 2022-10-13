@@ -3,7 +3,7 @@ import Head from "next/head";
 // import { useRouter } from "next/router";
 import NavBar from "./NavBar";
 
-export default function ContainerBlock({ children, ...customMeta }) {
+export default function ContainerBlock({ children, ...customMeta }, pageProps) {
   // const router = useRouter();
 
   const meta = {
@@ -19,8 +19,8 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <meta content={meta.description} name="description" />
         <link rel="icon" href={meta.icon} />
       </Head>
-      <main>
-        <NavBar />
+      <NavBar />
+      <main position="relative">
         <div>{children}</div>
       </main>
     </>

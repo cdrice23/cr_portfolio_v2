@@ -1,8 +1,7 @@
 import ContainerBlock from "../components/ContainerBlock";
 import Projects from "../components/Projects";
-// import styles from '../styles/Home.module.css'
 
-export default function ProjectsPage() {
+export default function ProjectsPage(pageProps) {
   return (
     <>
       <ContainerBlock
@@ -10,7 +9,7 @@ export default function ProjectsPage() {
         description="A list of projects I've worked on"
         icon="/github.ico"
       >
-        <Projects />
+        <Projects {...pageProps} />
       </ContainerBlock>
     </>
   );
