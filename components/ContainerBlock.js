@@ -1,11 +1,9 @@
 import React from "react";
 import Head from "next/head";
-// import { useRouter } from "next/router";
 import NavBar from "./NavBar";
+import { Center, Box } from "@chakra-ui/react";
 
 export default function ContainerBlock({ children, ...customMeta }, pageProps) {
-  // const router = useRouter();
-
   const meta = {
     title: "Chris Rice: Developer Portfolio",
     description: `v2 of portfolio page, recreated using next.js and Chakra UI`,
@@ -20,9 +18,12 @@ export default function ContainerBlock({ children, ...customMeta }, pageProps) {
         <link rel="icon" href={meta.icon} />
       </Head>
       <NavBar />
-      <main position="relative">
+      <Box bg="primary" h={"100vh"} textColor={"white"}>
         <div>{children}</div>
-      </main>
+      </Box>
+      {/* <main position="relative">
+        <div>{children}</div>
+      </main> */}
     </>
   );
 }

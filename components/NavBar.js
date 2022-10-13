@@ -1,34 +1,33 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-// import { useRouter } from "next/router";
 import { Button, Flex } from "@chakra-ui/react";
+import { useMediaQuery } from "@chakra-ui/react";
 
 export default function NavBar(pageProps) {
-  // const router = useRouter();
-  // console.log(router.asPath);
-  console.log(Flex.h);
+  const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
+  const navJustify = isLargerThan912 ? "flex-end" : "center";
   return (
     <>
       <Flex
         direction="row"
-        justify="flex-end"
+        justify={navJustify}
         p={1}
         h={12}
         w={"100vw"}
-        bgColor="white"
+        bgColor="secondary"
         // position="absolute"
       >
-        <Button variant="ghost">
+        <Button variant="ghost" mx={2}>
           <Link href="/">
             <a>Home</a>
           </Link>
         </Button>
-        <Button variant="ghost">
+        <Button variant="ghost" mx={2}>
           <Link href="/projects">
             <a>Projects</a>
           </Link>
         </Button>
-        <Button variant="ghost">
+        <Button variant="ghost" mx={2}>
           <Link href="/contact">
             <a>Contact</a>
           </Link>

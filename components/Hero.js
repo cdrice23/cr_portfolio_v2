@@ -30,9 +30,9 @@ export default function Hero(pageProps) {
           textColor="white"
         >
           <Heading as="h1" size="2xl" p={6}>
-            Hi, I'm Chris
+            Hi, I'm Chris.
           </Heading>
-          <Text align="center">
+          <Text align="center" fontWeight={600}>
             <span>I’ve spent my entire career working in tech.</span> <br />
             <br />
             I’ve worked as a consultant and had various management roles within

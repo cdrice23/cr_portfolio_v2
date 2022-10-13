@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import userData from "../constants/data";
-// import styles from '../styles/Home.module.css'
 
 const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
   return (
@@ -22,7 +21,7 @@ const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
       justifyContent="center"
       role="group"
     >
-      <Box overflow="hidden">
+      <Box overflow="hidden" borderRadius={"6px"}>
         <Image
           src={imgUrl}
           h="250px"
@@ -57,6 +56,7 @@ const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
 export default function Projects(pageProps) {
   // Hover styles enable for non-touch devices
   let hoverStyle;
+  console.log(pageProps.isTouchDevice());
   if (pageProps.isTouchDevice()) {
     hoverStyle = {
       imageHoverStyle: "none",
@@ -72,8 +72,8 @@ export default function Projects(pageProps) {
   }
   return (
     <>
-      <Flex direction="row" m={6}>
-        <Heading as="h1" size="2xl" w="100vw">
+      <Flex direction="row">
+        <Heading as="h1" size="2xl" w="100vw" p={6}>
           Project List
         </Heading>
       </Flex>
