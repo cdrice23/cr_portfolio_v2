@@ -11,7 +11,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import userData from "../constants/data";
+import portfolioData from "../constants/data";
 
 const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
   return (
@@ -82,7 +82,7 @@ export default function Projects(pageProps) {
         justifyContent="center"
         spacing={12}
       >
-        {userData.projects.map((project, i) => (
+        {portfolioData.projects.map((project, i) => (
           <ProjectCard
             title={project.title}
             link={project.link}

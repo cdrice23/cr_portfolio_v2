@@ -1,51 +1,49 @@
 import React from "react";
-import { Text, Heading, Flex, Image, useMediaQuery } from "@chakra-ui/react";
+import {
+  Center,
+  Text,
+  Heading,
+  Flex,
+  Image,
+  useMediaQuery,
+} from "@chakra-ui/react";
+
+// GROUP CARD
 
 export default function Hero(pageProps) {
   const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
   const imageAlign = isLargerThan912 ? "50% 50%" : "25% 50%";
-
+  const herolength = (id) => {
+    return document.getElementById(id).innerText.length;
+  };
   return (
     <>
-      <Flex
-        alignItems="center"
-        justifyContent="center"
-        h="100vh"
-        w="100%"
-        display="flex"
-      >
+      <Center h="100vh" w="100vw" display="grid" placeItems="center">
         <Image
           src="/headshot_portfolio.jpg"
-          w="100%"
+          w="100vw"
           h="100vh"
           align={imageAlign}
           fit="cover"
           filter="grayscale(90%)"
         />
-        <Flex
-          direction="column"
-          p={12}
-          align="center"
+        <Center
           position="absolute"
-          textColor="white"
+          h={"50%"}
+          w={"75%"}
+          backgroundColor="rgba(255, 255, 255, .55)"
+          filter="blur(16px)"
+        />
+        <Center
+          position="absolute"
+          h={"50%"}
+          w={"75%"}
+          display="grid"
+          placeItems="center"
         >
-          <Heading as="h1" size="2xl" p={6}>
-            Hi, I'm Chris.
-          </Heading>
-          <Text align="center" fontWeight={600}>
-            <span>I’ve spent my entire career working in tech.</span> <br />
-            <br />
-            I’ve worked as a consultant and had various management roles within
-            a large tech startup. Whenever I had the opportunity to build
-            something technical from scratch (be it a simple Excel macro to more
-            complicated Retool applications), it gave me a renewed sense of
-            passion and excitement in my workday. <br />
-            <br />8 years later, I decided to pivot careers and dive into the
-            deep-end of programming. Take a look at some of my most recent
-            projects, and don’t hesitate to reach out and connect!
-          </Text>
-        </Flex>
-      </Flex>
+          {/* INSERT CHILDREN HERE - USE MAP + FILTER */}
+        </Center>
+      </Center>
     </>
   );
 
