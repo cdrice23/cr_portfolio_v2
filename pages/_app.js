@@ -6,7 +6,7 @@ import "@fontsource/source-code-pro";
 
 function MyApp({ Component, pageProps }) {
   const isTouchDevice = () => {
-    return "ontouchstart" in window;
+    return typeof window !== "undefined" && "ontouchstart" in window;
   };
   return (
     <ChakraProvider resetCSS theme={mainTheme}>
