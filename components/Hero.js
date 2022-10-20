@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Center,
-  Text,
-  Heading,
-  Flex,
-  Image,
-  useMediaQuery,
-  Box,
-  keyframes,
-} from "@chakra-ui/react";
+import { Center, Image, useMediaQuery, Box } from "@chakra-ui/react";
 import portfolioData from "../constants/data";
 
 // GROUP CARD
@@ -45,8 +36,21 @@ const HeroLines = ({ lines }) => {
       lineDelay={e.lineDelay}
       textChars={e.textChars}
       blinkAnim={e.blinkAnim}
-      endAnim={e.endAnim}
       w={`${e.textChars}ch`}
+      animation={`${portfolioData.keyframes.typing} ${e.lineDuration} steps(${
+        e.textChars
+      }) ${e.lineDelay}, ${
+        e.blinkAnim === "duringblink"
+          ? `${portfolioData.keyframes.duringblink} ${e.lineDuration} step-end ${e.lineDelay}`
+          : e.blinkAnim === "endblink"
+          ? `${portfolioData.keyframes.endblink} 0.5s step-end alternate infinite`
+          : ""
+      }${
+        e.visibleAnim === "visible"
+          ? `, ${portfolioData.keyframes.visible} ${e.visDuration} step-end ${e.lineDelay} infinite`
+          : e.visibleAnim
+      }`}
+      opacity={e.visibleAnim === "visible" ? 0 : "inherit"}
     >
       {e.text}
     </Box>

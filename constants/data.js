@@ -102,7 +102,7 @@ const portfolioData = {
     }`,
     visible: keyframes`0% {
       color: black;
-      visibility: visible;
+      opacity: 1;
     }`,
   },
   heroDuration: "49.26s",
@@ -155,7 +155,7 @@ const portfolioData = {
           lineDelay: "8.86s",
           textChars: 75,
           blinkAnim: "duringblink",
-          visibleAnim: "visible",
+          visibleAnim: "",
         },
         {
           hgroup: 3,
@@ -165,7 +165,8 @@ const portfolioData = {
           lineDelay: "13.86s",
           textChars: 13,
           blinkAnim: "endblink",
-          visibleAnim: "",
+          visibleAnim: "visible",
+          visDuration: "0.87s",
         },
       ],
     },
@@ -182,7 +183,7 @@ const portfolioData = {
           lineDelay: "17.23s",
           textChars: 72,
           blinkAnim: "duringblink",
-          visibleAnim: "visible",
+          visibleAnim: "",
         },
         {
           hgroup: 4,
@@ -193,6 +194,7 @@ const portfolioData = {
           textChars: 72,
           blinkAnim: "duringblink",
           visibleAnim: "visible",
+          visDuration: "8.13s",
         },
         {
           hgroup: 4,
@@ -202,7 +204,8 @@ const portfolioData = {
           lineDelay: "26.83s",
           textChars: 50,
           blinkAnim: "endblink",
-          visibleAnim: "",
+          visibleAnim: "visible",
+          visDuration: "3.33s",
         },
       ],
     },
@@ -219,7 +222,7 @@ const portfolioData = {
           lineDelay: "32.66s",
           textChars: 71,
           blinkAnim: "duringblink",
-          visibleAnim: "visible",
+          visibleAnim: "",
         },
         {
           hgroup: 5,
@@ -229,7 +232,8 @@ const portfolioData = {
           lineDelay: "37.39s",
           textChars: 12,
           blinkAnim: "endblink",
-          visibleAnim: "",
+          visibleAnim: "visible",
+          visDuration: "0.8s",
         },
       ],
     },
@@ -246,7 +250,7 @@ const portfolioData = {
           lineDelay: "40.69s",
           textChars: 75,
           blinkAnim: "duringblink",
-          visibleAnim: "visible",
+          visibleAnim: "",
         },
         {
           hgroup: 6,
@@ -256,7 +260,8 @@ const portfolioData = {
           lineDelay: "45.69s",
           textChars: 16,
           blinkAnim: "endblink",
-          visibleAnim: "",
+          visibleAnim: "visible",
+          visDuration: "1.07s",
         },
       ],
     },
