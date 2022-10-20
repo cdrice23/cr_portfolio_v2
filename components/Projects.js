@@ -84,6 +84,7 @@ export default function Projects(pageProps) {
       >
         {portfolioData.projects.map((project, i) => (
           <ProjectCard
+            key={i}
             title={project.title}
             link={project.link}
             imgUrl={project.imgUrl}

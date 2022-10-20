@@ -1,3 +1,5 @@
+import { keyframes } from "@emotion/react";
+
 const portfolioData = {
   githubUsername: "ricechrisdtreat",
   name: "Chris Rice",
@@ -40,15 +42,80 @@ const portfolioData = {
       imgUrl: "/profile_square_v3.jpg",
     },
   ],
+  keyframes: {
+    switch1: keyframes`0% {
+      background-color: transparent;
+      visibility: visible;
+    }
+    6.96% {
+      visibility: hidden;
+    }`,
+    switch2: keyframes`0% {
+      background-color: transparent;
+      visibility: visible;
+    }
+    11.02% {
+      visibility: hidden;
+    }`,
+    switch3: keyframes`0% {
+      background-color: transparent;
+      visibility: visible;
+    }
+    16.99% {
+      visibility: hidden;
+    }`,
+    switch4: keyframes`0% {
+      background-color: transparent;
+      visibility: visible;
+    }
+    31.32% {
+      visibility: hidden;
+    }`,
+    switch5: keyframes`0% {
+      background-color: transparent;
+      visibility: visible;
+    }
+    16.30% {
+      visibility: hidden;
+    }`,
+    switch6: keyframes`0% {
+      background-color: transparent;
+      visibility: visible;
+    }
+    17.40% {
+      visibility: hidden;
+    }`,
+    typing: keyframes`from {
+      width: 0
+    }`,
+    endblink: keyframes`0% {
+      border-right: 3px solid orange;
+    }
+    50% {
+      border-color: transparent;
+    }`,
+    duringblink: keyframes`0% {
+      border-right: 3px solid orange;
+    }
+    100% {
+      border-right: 3px solid orange;
+    }`,
+    visible: keyframes`0% {
+      color: black;
+      visibility: visible;
+    }`,
+  },
   heroDuration: "49.26s",
   lineBuffer: "2.5s",
   herogroups: [
     {
       id: 1,
       switchDelay: "0s",
-      keyframes: "switch1",
+      switchAnim: "switch1",
       lines: [
         {
+          hgroup: 1,
+          id: "h1l1",
           text: "Hi, I'm Chris.",
           lineDuration: "0.93s",
           lineDelay: "0s",
@@ -61,9 +128,11 @@ const portfolioData = {
     {
       id: 2,
       switchDelay: "3.43s",
-      keyframes: "switch3",
+      switchAnim: "switch2",
       lines: [
         {
+          hgroup: 2,
+          id: "h2l1",
           text: "I’ve spent my entire career working in tech.",
           lineDuration: "2.93s",
           lineDelay: "3.43s",
@@ -76,9 +145,11 @@ const portfolioData = {
     {
       id: 3,
       switchDelay: "8.86s",
-      keyframes: "switch3",
+      switchAnim: "switch3",
       lines: [
         {
+          hgroup: 3,
+          id: "h3l1",
           text: "I’ve worked as a consultant and had various management roles within a large",
           lineDuration: "5s",
           lineDelay: "8.86s",
@@ -87,6 +158,8 @@ const portfolioData = {
           visibleAnim: "visible",
         },
         {
+          hgroup: 3,
+          id: "h3l2",
           text: "tech startup.",
           lineDuration: "0.87s",
           lineDelay: "13.86s",
@@ -99,9 +172,11 @@ const portfolioData = {
     {
       id: 4,
       switchDelay: "17.23s",
-      keyframes: "switch4",
+      switchAnim: "switch4",
       lines: [
         {
+          hgroup: 4,
+          id: "h4l1",
           text: "Whenever I had the opportunity to build something technical from scratch",
           lineDuration: "4.8s",
           lineDelay: "17.23s",
@@ -110,6 +185,8 @@ const portfolioData = {
           visibleAnim: "visible",
         },
         {
+          hgroup: 4,
+          id: "h4l2",
           text: "(be it a simple Excel macro to more complicated Retool applications), it",
           lineDuration: "4.8s",
           lineDelay: "22.03s",
@@ -118,6 +195,8 @@ const portfolioData = {
           visibleAnim: "visible",
         },
         {
+          hgroup: 4,
+          id: "h4l3",
           text: "gave me a renewed sense of passion and excitement.",
           lineDuration: "3.33s",
           lineDelay: "26.83s",
@@ -130,9 +209,11 @@ const portfolioData = {
     {
       id: 5,
       switchDelay: "32.66s",
-      keyframes: "switch5",
+      switchAnim: "switch5",
       lines: [
         {
+          hgroup: 5,
+          id: "h5l1",
           text: "8 years later, I decided to pivot careers and dive into the deep-end of",
           lineDuration: "4.73s",
           lineDelay: "32.66s",
@@ -141,6 +222,8 @@ const portfolioData = {
           visibleAnim: "visible",
         },
         {
+          hgroup: 5,
+          id: "h5l2",
           text: "programming.",
           lineDuration: "0.8s",
           lineDelay: "37.39s",
@@ -153,9 +236,11 @@ const portfolioData = {
     {
       id: 6,
       switchDelay: "40.69s",
-      keyframes: "switch6",
+      switchAnim: "switch6",
       lines: [
         {
+          hgroup: 6,
+          id: "h6l1",
           text: "Take a look at some of my most recent projects, and don't hesitate to reach",
           lineDuration: "5s",
           lineDelay: "40.69s",
@@ -164,6 +249,8 @@ const portfolioData = {
           visibleAnim: "visible",
         },
         {
+          hgroup: 6,
+          id: "h6l2",
           text: "out and connect!",
           lineDuration: "1.07s",
           lineDelay: "45.69s",

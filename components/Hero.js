@@ -6,9 +6,52 @@ import {
   Flex,
   Image,
   useMediaQuery,
+  Box,
+  keyframes,
 } from "@chakra-ui/react";
+import portfolioData from "../constants/data";
 
 // GROUP CARD
+const HeroGroup = ({ id, switchAnim, lines, heroduration, switchDelay }) => {
+  return (
+    <Center
+      fontSize="md"
+      visibility="hidden"
+      position="absolute"
+      display="flex"
+      flexDirection="column"
+      textColor="black"
+      lines={lines}
+      animation={`${portfolioData.keyframes[switchAnim]} ${heroduration} step-end ${switchDelay} infinite`}
+      willChange="animation"
+    >
+      {portfolioData.herogroups
+        .filter((g) => g.id === id)
+        .map((g) => (
+          <HeroLines lines={g.lines} key={g.id} hgroup={g.hgroup} />
+        ))}
+    </Center>
+  );
+};
+
+// LINE CARD
+const HeroLines = ({ lines }) => {
+  return lines.map((e) => (
+    <Box
+      whiteSpace="nowrap"
+      overflow="hidden"
+      key={e.id}
+      lineDuration={e.lineDuration}
+      lineDelay={e.lineDelay}
+      textChars={e.textChars}
+      blinkAnim={e.blinkAnim}
+      endAnim={e.endAnim}
+      w={`${e.textChars}ch`}
+    >
+      {e.text}
+    </Box>
+  ));
+};
 
 export default function Hero(pageProps) {
   const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
@@ -42,15 +85,17 @@ export default function Hero(pageProps) {
           placeItems="center"
         >
           {/* INSERT CHILDREN HERE - USE MAP + FILTER */}
+          {portfolioData.herogroups.map((group) => (
+            <HeroGroup
+              key={group.id}
+              id={group.id}
+              switchAnim={group.switchAnim}
+              heroduration={portfolioData.heroDuration}
+              switchDelay={group.switchDelay}
+            />
+          ))}
         </Center>
       </Center>
     </>
   );
-
-  // <main>
-  //   <h1>Hi, I'm Chris.</h1>
-  //   <p>
-
-  //   </p>
-  // </main>
 }
