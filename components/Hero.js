@@ -61,7 +61,7 @@ const HeroLines = ({ lines }) => {
   ));
 };
 
-export default function Hero(pageProps) {
+export default function Hero() {
   const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
   const imageAlign = isLargerThan912 ? "50% 50%" : "25% 50%";
   const heroTextHeight = isLargerThan912 ? "20%" : "60%";

@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import NavBar from "./NavBar";
-import { Center, Box } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 
-export default function ContainerBlock({ children, ...customMeta }, pageProps) {
+export default function ContainerBlock({ children, ...customMeta }) {
   const meta = {
     title: "Chris Rice: Developer Portfolio",
     description: `v2 of portfolio page, recreated using next.js and Chakra UI`,

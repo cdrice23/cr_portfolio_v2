@@ -1,8 +1,8 @@
-import Head from "next/head";
+import React from "react";
 import { Heading, Flex, Button, Link } from "@chakra-ui/react";
 // import styles from '../styles/Home.module.css'
 
-export default function ContactMe(pageProps) {
+export default function ContactMe() {
   return (
     <>
       <Flex

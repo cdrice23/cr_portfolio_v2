@@ -10,7 +10,6 @@ import {
   LinkOverlay,
   Image,
 } from "@chakra-ui/react";
-import Link from "next/link";
 import portfolioData from "../constants/data";
 
 const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {

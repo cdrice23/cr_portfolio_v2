@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { Button, Flex } from "@chakra-ui/react";
 import { useMediaQuery } from "@chakra-ui/react";
 
-export default function NavBar(pageProps) {
+export default function NavBar() {
   const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
   const navJustify = isLargerThan912 ? "flex-end" : "center";
   return (
