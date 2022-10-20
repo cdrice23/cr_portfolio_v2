@@ -4,6 +4,8 @@ import portfolioData from "../constants/data";
 
 // GROUP CARD
 const HeroGroup = ({ id, switchAnim, lines, heroduration, switchDelay }) => {
+  const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
+  const heroDisplay = isLargerThan912 ? "wideDisplay" : "narrowDisplay";
   return (
     <Center
       fontSize="md"
@@ -13,10 +15,10 @@ const HeroGroup = ({ id, switchAnim, lines, heroduration, switchDelay }) => {
       flexDirection="column"
       textColor="black"
       lines={lines}
-      animation={`${portfolioData.keyframes[switchAnim]} ${heroduration} step-end ${switchDelay} infinite`}
+      animation={`${portfolioData.keyframes[heroDisplay][switchAnim]} ${heroduration} step-end ${switchDelay} infinite`}
       willChange="animation"
     >
-      {portfolioData.herogroups
+      {portfolioData.herogroups[heroDisplay]
         .filter((g) => g.id === id)
         .map((g) => (
           <HeroLines lines={g.lines} key={g.id} hgroup={g.hgroup} />
@@ -27,6 +29,8 @@ const HeroGroup = ({ id, switchAnim, lines, heroduration, switchDelay }) => {
 
 // LINE CARD
 const HeroLines = ({ lines }) => {
+  const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
+  const heroDisplay = isLargerThan912 ? "wideDisplay" : "narrowDisplay";
   return lines.map((e) => (
     <Box
       whiteSpace="nowrap"
@@ -37,17 +41,17 @@ const HeroLines = ({ lines }) => {
       textChars={e.textChars}
       blinkAnim={e.blinkAnim}
       w={`${e.textChars}ch`}
-      animation={`${portfolioData.keyframes.typing} ${e.lineDuration} steps(${
-        e.textChars
-      }) ${e.lineDelay}, ${
+      animation={`${portfolioData.keyframes[heroDisplay].typing} ${
+        e.lineDuration
+      } steps(${e.textChars}) ${e.lineDelay}, ${
         e.blinkAnim === "duringblink"
-          ? `${portfolioData.keyframes.duringblink} ${e.lineDuration} step-end ${e.lineDelay}`
+          ? `${portfolioData.keyframes[heroDisplay].duringblink} ${e.lineDuration} step-end ${e.lineDelay}`
           : e.blinkAnim === "endblink"
-          ? `${portfolioData.keyframes.endblink} 0.5s step-end alternate infinite`
+          ? `${portfolioData.keyframes[heroDisplay].endblink} 0.5s step-end alternate infinite`
           : ""
       }${
         e.visibleAnim === "visible"
-          ? `, ${portfolioData.keyframes.visible} ${e.visDuration} step-end ${e.lineDelay} infinite`
+          ? `, ${portfolioData.keyframes[heroDisplay].visible} ${e.visDuration} step-end ${e.lineDelay} infinite`
           : e.visibleAnim
       }`}
       opacity={e.visibleAnim === "visible" ? 0 : "inherit"}
@@ -60,9 +64,12 @@ const HeroLines = ({ lines }) => {
 export default function Hero(pageProps) {
   const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
   const imageAlign = isLargerThan912 ? "50% 50%" : "25% 50%";
-  const herolength = (id) => {
-    return document.getElementById(id).innerText.length;
-  };
+  const heroTextHeight = isLargerThan912 ? "20%" : "60%";
+  const heroTextWidth = isLargerThan912 ? "80%" : "80%";
+  const heroDisplay = isLargerThan912 ? "wideDisplay" : "narrowDisplay";
+  // const herolength = (id) => {
+  //   return document.getElementById(id).innerText.length;
+  // };
   return (
     <>
       <Center h="100vh" w="100vw" display="grid" placeItems="center">
@@ -76,25 +83,25 @@ export default function Hero(pageProps) {
         />
         <Center
           position="absolute"
-          h={"50%"}
-          w={"75%"}
+          h={heroTextHeight}
+          w={heroTextWidth}
           backgroundColor="rgba(255, 255, 255, .55)"
           filter="blur(16px)"
         />
         <Center
           position="absolute"
-          h={"50%"}
-          w={"75%"}
+          h={heroTextHeight}
+          w={heroTextWidth}
           display="grid"
           placeItems="center"
         >
           {/* INSERT CHILDREN HERE - USE MAP + FILTER */}
-          {portfolioData.herogroups.map((group) => (
+          {portfolioData.herogroups[heroDisplay].map((group) => (
             <HeroGroup
               key={group.id}
               id={group.id}
               switchAnim={group.switchAnim}
-              heroduration={portfolioData.heroDuration}
+              heroduration={portfolioData.heroDuration[heroDisplay]}
               switchDelay={group.switchDelay}
             />
           ))}
