@@ -17,7 +17,7 @@ const portfolioData = {
       title: "Chris Rice - Developer Portfolio (v1)",
       link: "https://ricechrisdtreat.github.io/crPortfolio/",
       description: "v1 of portfolio page using basic HTML and CSS",
-      imgUrl: "/profile_square_v1.JPG",
+      imgUrl: "/profile_square_v1.jpg",
     },
     {
       title: "Scotch Tour - v2 [COMING SOON]",
@@ -32,7 +32,7 @@ const portfolioData = {
       link: "https://github.com/ricechrisdtreat/cr_portfolio_v2",
       description:
         "v2 of portfolio page, recreating v1 using next.js and Chakra UI",
-      imgUrl: "/profile_square_v2.JPG",
+      imgUrl: "/profile_square_v2.jpg",
     },
     {
       title: "Chris Rice - Developer Portfolio (v3)",
