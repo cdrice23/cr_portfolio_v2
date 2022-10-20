@@ -6,9 +6,10 @@ import portfolioData from "../constants/data";
 const HeroGroup = ({ id, switchAnim, lines, heroduration, switchDelay }) => {
   const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
   const heroDisplay = isLargerThan912 ? "wideDisplay" : "narrowDisplay";
+  const heroFontSize = isLargerThan912 ? "2xl" : "sm";
   return (
     <Center
-      fontSize="md"
+      fontSize={heroFontSize}
       visibility="hidden"
       position="absolute"
       display="flex"
@@ -64,8 +65,8 @@ const HeroLines = ({ lines }) => {
 export default function Hero() {
   const [isLargerThan912] = useMediaQuery("(min-width: 912px)");
   const imageAlign = isLargerThan912 ? "50% 50%" : "25% 50%";
-  const heroTextHeight = isLargerThan912 ? "20%" : "60%";
-  const heroTextWidth = isLargerThan912 ? "80%" : "80%";
+  const heroTextHeight = isLargerThan912 ? "20%" : "20%";
+  const heroTextWidth = isLargerThan912 ? "80%" : "95%";
   const heroDisplay = isLargerThan912 ? "wideDisplay" : "narrowDisplay";
   // const herolength = (id) => {
   //   return document.getElementById(id).innerText.length;
