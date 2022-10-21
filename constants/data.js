@@ -20,10 +20,10 @@ const portfolioData = {
       imgUrl: "/profile_square_v1.jpg",
     },
     {
-      title: "Scotch Tour - v2 [COMING SOON]",
+      title: "Scotch Tour - v2",
       link: "https://docs.google.com/document/d/12smHmW4YedWwyTznduN6UfEXMhAk_jMSDjleLgof4Ao/edit?usp=sharing",
       description:
-        "A progression of my first project built using next.js and Chakra UI. Much more whiz-bang!",
+        "*COMING SOON!* A progression of my first project built using next.js and Chakra UI. Much more whiz-bang!",
       imgUrl:
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/c3/a1/4f/the-whisky-library.jpg?w=1200&h=1200&s=1",
     },
@@ -31,14 +31,14 @@ const portfolioData = {
       title: "Chris Rice - Developer Portfolio (v2)",
       link: "https://github.com/ricechrisdtreat/cr_portfolio_v2",
       description:
-        "v2 of portfolio page, recreating v1 using next.js and Chakra UI",
+        "v2 of portfolio page, recreating v1 using next.js and Chakra UI. AKA The website you're on right now!",
       imgUrl: "/profile_square_v2.jpg",
     },
     {
       title: "Chris Rice - Developer Portfolio (v3)",
       link: "https://docs.google.com/document/d/1yG7egNK6NN_YNriMk50mIIrWug9FFnnplvL8uQ26-_4/edit?usp=sharing",
       description:
-        "v3 of portfolio page. A complete overhaul with additional whiz-bang functionality and design.",
+        "*COMING SOON!* v3 of portfolio page. A complete overhaul with additional whiz-bang functionality and design.",
       imgUrl: "/profile_square_v3.jpg",
     },
   ],
