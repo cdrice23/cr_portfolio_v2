@@ -69,7 +69,7 @@ export default function Projects(pageProps) {
       imageHoverStyle: "none",
       overlayHoverStyle: "none",
       staticTextStyle: "white",
-      cardOpacity: "brightness(50%)",
+      cardOpacity: "brightness(35%)",
     };
   } else {
     hoverStyle = {
@@ -89,7 +89,9 @@ export default function Projects(pageProps) {
       <SimpleGrid
         templateColumns="repeat(auto-fit, 250px)"
         justifyContent="center"
+        alignItems={"flex-start"}
         spacing={12}
+        bg="primary"
       >
         {portfolioData.projects.map((project, i) => (
           <ProjectCard

@@ -18,7 +18,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
         <link rel="icon" href={meta.icon} />
       </Head>
       <NavBar />
-      <Box bg="primary" h={"100vh"} textColor={"white"}>
+      <Box bg="primary" minH="100vh" textColor={"white"}>
         <div>{children}</div>
       </Box>
       {/* <main position="relative">

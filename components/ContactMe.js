@@ -37,9 +37,6 @@ export default function ContactMe() {
           </Flex>
         </Flex>
       </Flex>
-      <main>
-        <h1>Hit me up!</h1>
-      </main>
     </>
   );
 }
