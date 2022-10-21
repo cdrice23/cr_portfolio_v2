@@ -36,7 +36,7 @@ const ProjectCard = ({
           fit="contain"
           _groupHover={hoverStyle.imageHoverStyle}
           transition="all 200ms ease-in-out"
-          filter={cardOpacity}
+          filter={hoverStyle.cardOpacity}
         />
       </Box>
       <LinkOverlay
