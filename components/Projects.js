@@ -68,7 +68,7 @@ export default function Projects(pageProps) {
     hoverStyle = {
       imageHoverStyle: "none",
       overlayHoverStyle: "none",
-      staticTextStyle: "black",
+      staticTextStyle: "white",
       cardOpacity: "brightness(50%)",
     };
   } else {
