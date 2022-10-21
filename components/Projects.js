@@ -12,14 +12,7 @@ import {
 } from "@chakra-ui/react";
 import portfolioData from "../constants/data";
 
-const ProjectCard = ({
-  title,
-  link,
-  imgUrl,
-  description,
-  hoverStyle,
-  cardOpacity,
-}) => {
+const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
   return (
     <LinkBox
       display="flex"
