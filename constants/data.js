@@ -29,7 +29,7 @@ const portfolioData = {
     },
     {
       title: "Chris Rice - Developer Portfolio (v2)",
-      link: "https://github.com/ricechrisdtreat/cr_portfolio_v2",
+      link: "cr-portfolio-v2.vercel.app",
       description:
         "v2 of portfolio page, recreating v1 using next.js and Chakra UI. AKA The website you're on right now!",
       imgUrl: "/profile_square_v2.jpg",
