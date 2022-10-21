@@ -12,7 +12,7 @@ export default function ContactMe() {
         w={"100%"}
       >
         <Flex direction="column" p={12} align="center">
-          <Heading as="h1" size="2xl" p={6}>
+          <Heading as="h1" size="2xl">
             Hit me up!
           </Heading>
           <Flex>
