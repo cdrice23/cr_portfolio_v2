@@ -12,7 +12,14 @@ import {
 } from "@chakra-ui/react";
 import portfolioData from "../constants/data";
 
-const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
+const ProjectCard = ({
+  title,
+  link,
+  imgUrl,
+  description,
+  hoverStyle,
+  cardOpacity,
+}) => {
   return (
     <LinkBox
       display="flex"
@@ -29,6 +36,7 @@ const ProjectCard = ({ title, link, imgUrl, description, hoverStyle }) => {
           fit="contain"
           _groupHover={hoverStyle.imageHoverStyle}
           transition="all 200ms ease-in-out"
+          filter={cardOpacity}
         />
       </Box>
       <LinkOverlay
@@ -60,13 +68,15 @@ export default function Projects(pageProps) {
     hoverStyle = {
       imageHoverStyle: "none",
       overlayHoverStyle: "none",
-      staticTextStyle: "white",
+      staticTextStyle: "black",
+      cardOpacity: "brightness(50%)",
     };
   } else {
     hoverStyle = {
       imageHoverStyle: { filter: "blur(8px)", transform: "scale(1.03)" },
       overlayHoverStyle: { textColor: "white" },
       staticTextStyle: "transparent",
+      cardOpacity: "brightness(100%)",
     };
   }
   return (
