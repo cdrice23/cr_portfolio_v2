@@ -81,6 +81,7 @@ export default function Hero() {
           align={imageAlign}
           fit="cover"
           filter="grayscale(90%)"
+          priority
         />
         <Center
           position="absolute"
