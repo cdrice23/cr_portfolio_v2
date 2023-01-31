@@ -21,9 +21,9 @@ const portfolioData = {
     },
     {
       title: "Scotch Tour - v2",
-      link: "https://docs.google.com/document/d/12smHmW4YedWwyTznduN6UfEXMhAk_jMSDjleLgof4Ao/edit?usp=sharing",
+      link: "https://scotchtour-v2-ricechrisdtreat.vercel.app/",
       description:
-        "*COMING SOON!* A progression of my first project built using next.js and Chakra UI. Much more whiz-bang!",
+        "A progression of my first project built using next.js and Material UI. Much more whiz-bang!",
       imgUrl:
         "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/c3/a1/4f/the-whisky-library.jpg?w=1200&h=1200&s=1",
     },
