@@ -17,7 +17,7 @@ export default function ContactMe() {
           </Heading>
           <Flex>
             <Button variant="ghost" _hover={{ bg: "#238636" }} mx={4}>
-              <Link href="https://github.com/ricechrisdtreat" target="_blank">
+              <Link href="https://github.com/cdrice23" target="_blank">
                 <a>Github</a>
               </Link>
             </Button>
